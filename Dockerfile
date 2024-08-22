@@ -5,7 +5,7 @@ FROM tomcat:9-jdk11
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
 # Add your WAR file to the webapps directory with a new name
-COPY webapp.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/WebApp.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose the port Tomcat will run on
 EXPOSE 8080
